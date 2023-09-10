@@ -25,6 +25,13 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+	    <groupId>rs.np</groupId>
+	    <artifactId>cirkovic-anja-0077-2019-zajednicki</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>
+	    <scope>system</scope>
+	    <systemPath>${project.basedir}/../cirkovic-anja-0077-2019-zajednicki/target/cirkovic-anja-0077-2019-zajednicki-0.0.1-SNAPSHOT.jar</systemPath>
+	</dependency>
   </dependencies>
 
   <build>
