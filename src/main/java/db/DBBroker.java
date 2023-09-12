@@ -12,16 +12,17 @@ import java.util.Properties;
 
 import domen.OpstiDomenskiObjekat;
 
-
 public class DBBroker {
 
 	private static DBBroker instance;
 
 	private Connection connection;
 
+	private Properties properties;
+	
 	private DBBroker() {
 		try {
-			Properties properties = new Properties();
+			properties = new Properties();
 			properties.load(new FileInputStream("config/dbconfig.properties"));
 			String url = properties.getProperty("url");
 			String username = properties.getProperty("username");
@@ -35,6 +36,9 @@ public class DBBroker {
 
 	public Connection getConnection() {
 		return connection;
+	}
+	public void setConnection(Connection connection) {
+		this.connection = connection;
 	}
 	
 	public static DBBroker getInstance() {
@@ -75,6 +79,7 @@ public class DBBroker {
 		Statement s = connection.createStatement();
 		s.executeUpdate(upit);
 	}
+	
 
 }
 

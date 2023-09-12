@@ -1,7 +1,6 @@
 package so.odeljenje;
 
 import java.util.ArrayList;
-
 import db.DBBroker;
 import domen.Odeljenje;
 import domen.OpstiDomenskiObjekat;

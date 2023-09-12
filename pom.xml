@@ -19,12 +19,17 @@
   </properties>
 
   <dependencies>
+  <dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.25</version>
+		</dependency>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
+		<groupId>org.junit.jupiter</groupId>
+		<artifactId>junit-jupiter</artifactId>
+		<version>5.9.1</version>
+		<scope>test</scope>
+	</dependency>
     <dependency>
 	    <groupId>rs.np</groupId>
 	    <artifactId>cirkovic-anja-0077-2019-zajednicki</artifactId>

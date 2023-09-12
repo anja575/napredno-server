@@ -1,7 +1,6 @@
 package so.profesor;
 
 import java.util.ArrayList;
-
 import db.DBBroker;
 import domen.OpstiDomenskiObjekat;
 import domen.Profesor;

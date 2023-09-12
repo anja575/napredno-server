@@ -1,7 +1,6 @@
 package so.ucenik;
 
 import java.util.ArrayList;
-
 import db.DBBroker;
 import domen.OpstiDomenskiObjekat;
 import domen.Ucenik;
