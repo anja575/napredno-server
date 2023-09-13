@@ -8,8 +8,20 @@ import domen.OpstiDomenskiObjekat;
 import domen.Ucenik;
 import so.OpstaSistemskaOperacija;
 
+/**
+ * 
+ * Odnosi se na sistemsku operaciju za dodavanje novog odeljenja, kao i ucenika tog odeljenja u bazu podataka.
+ * 
+ * @author Anja
+ *
+ */
 public class DodajOdeljenjeSO extends OpstaSistemskaOperacija{
-	
+	/**
+	 * Proverava da li su podaci validni, tj. da li je objekat klase Odeljenje i da li 
+	 * je broj ucenika u rasponu od 5 do 30. 
+	 * 
+	 * @throws Exception ukoliko objekat nije instanca klase Odeljenje ili ukoliko je broj ucenika manji od 5 ili veci od 30.
+	 */
 	@Override
 	protected void validacija(OpstiDomenskiObjekat odo) throws Exception {
 		if (!(odo instanceof Odeljenje)) {
@@ -22,7 +34,11 @@ public class DodajOdeljenjeSO extends OpstaSistemskaOperacija{
 			throw new Exception("Broj ucenika u odeljenju mora biti od 5 do 30.");
 		}	
 	}
-
+	/**
+	 * Izvrsava dodavanje novog odeljenja i njegovih ucenika u bazu podataka, 
+	 * tako sto poziva DBBrokera da izvrsi INSERT upit za odeljenje, a zatim 
+	 * i INSERT upit za sve ucenike tog odeljenja. 
+	 */
 	@Override
 	protected void izvrsiOperaciju(OpstiDomenskiObjekat odo) throws Exception {
 		PreparedStatement ps = DBBroker.getInstance().insert(odo);

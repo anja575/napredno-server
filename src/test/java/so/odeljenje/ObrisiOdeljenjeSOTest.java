@@ -15,7 +15,6 @@ import domen.Pol;
 import domen.Skola;
 import domen.Smer;
 import domen.Ucenik;
-import so.ucenik.UcitajUcenikeSO;
 
 class ObrisiOdeljenjeSOTest {
 	
